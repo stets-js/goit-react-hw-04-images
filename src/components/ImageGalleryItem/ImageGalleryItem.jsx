@@ -14,7 +14,11 @@ const ImageGalleryItem = ({itemData, openModal}) => {
 }
 
 ImageGalleryItem.propTypes = {
-  itemData: PropTypes.shape.isRequired,
+  itemData: PropTypes.shape({
+    webformatURL: PropTypes.string.isRequired,
+    tags: PropTypes.string.isRequired,
+    largeImageURL: PropTypes.string.isRequired,
+  }).isRequired,
   openModal: PropTypes.func.isRequired,
 }
 
