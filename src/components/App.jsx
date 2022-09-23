@@ -40,9 +40,9 @@ const loadMore = () => {
     setIsLoading(true)
 
     try {
-      // if (!searchQuery) {
-      //   return;
-      // }
+      if (!searchQuery) {
+        return;
+      }
       const data = await fetchGallery(searchQuery, page);
       setFoundImages(data.totalHits)
       const {hits: newImages, totalHits: foundImages} = data;
