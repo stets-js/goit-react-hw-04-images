@@ -4,7 +4,7 @@ import css from './Modal.module.css'
 
 
 const Modal = ({closeModal, imgData, imgAlt}) => {
-  console.log(imgData);
+
 
 const  handleOverlayClick = (evt) => {
     const overlay = evt.currentTarget;
