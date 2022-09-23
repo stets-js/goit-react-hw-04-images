@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import css from './Modal.module.css'
 
 
-const Modal = ({closeModal, imgData}) => {
+const Modal = ({closeModal, imgData, imgAlt}) => {
+  console.log(imgData);
 
 const  handleOverlayClick = (evt) => {
     const overlay = evt.currentTarget;
@@ -27,7 +28,7 @@ const  handleOverlayClick = (evt) => {
       
       <div className={css.overlay} onClick={handleOverlayClick}>
         <div className={css.modal}>
-          <img src={imgData} alt={'alt'} />
+          <img src={imgData} alt={imgAlt} />
         </div>
       </div>
     )

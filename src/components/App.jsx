@@ -16,6 +16,7 @@ const App = () => {
   const [error, setError] = useState(null); 
   const [foundImages, setFoundImages] = useState(null); 
   const [currentLargeImg, setCurrentLargeImg] = useState(null);
+  const [currentAlt, setCurrentAlt] = useState(null)
 
   const setInitialParams = (search) => {
     if (search === '') {
@@ -61,7 +62,8 @@ const loadMore = () => {
 
 
  const openModal = (src, alt) => {
-    setCurrentLargeImg(src, alt);
+   setCurrentLargeImg(src);
+   setCurrentAlt(alt)
   }
 
  const closeModal = () => {
@@ -87,7 +89,7 @@ const loadMore = () => {
             }
           </>
         }
-        {currentLargeImg && <Modal closeModal={closeModal} imgData={currentLargeImg}/>}
+        {currentLargeImg && <Modal closeModal={closeModal} imgData={currentLargeImg} imgAlt={currentAlt} />}
       </div>
     );
   }
