@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import css from './Searchbar.module.css'
 
 
-const Searchbar = (onSubmit) => {
+const Searchbar = ({onSubmit}) => {
   
   const [q, setQ] = useState('')
 

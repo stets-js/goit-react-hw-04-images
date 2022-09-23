@@ -4,7 +4,6 @@ import css from './Modal.module.css'
 
 
 const Modal = ({closeModal, imgData}) => {
-  
 
 const  handleOverlayClick = (evt) => {
     const overlay = evt.currentTarget;
@@ -21,13 +20,14 @@ const  handleOverlayClick = (evt) => {
 
   useEffect(() => {
     document.addEventListener("keydown", handleEcsapeKey);
-    return  document.removeEventListener("keydown", handleEcsapeKey);
+    return () => { document.removeEventListener("keydown", handleEcsapeKey) }
   })
-  
-    return (
+
+  return (
+      
       <div className={css.overlay} onClick={handleOverlayClick}>
         <div className={css.modal}>
-          <img src={imgData} alt={''} />
+          <img src={imgData} alt={'alt'} />
         </div>
       </div>
     )

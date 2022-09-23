@@ -18,7 +18,7 @@ const App = () => {
   const [currentLargeImg, setCurrentLargeImg] = useState(null);
 
   const setInitialParams = (search) => {
-    if (searchQuery === '') {
+    if (search === '') {
       return alert('Enter the search value!');
     }
 

@@ -4,7 +4,7 @@ import nextId from "react-id-generator";
 import ImageGalleryItem from 'components/ImageGalleryItem';
 import css from './ImageGallery.module.css'
 
-const ImageGallery = ({items, openModal}) => {
+const ImageGallery = ({ items, openModal }) => {
   return (
     <ul className={css.imageGallery}>
       {items.map(item => <ImageGalleryItem key={nextId()} itemData={item} openModal={openModal}/>)}
